@@ -1,0 +1,57 @@
+Version: "0.1.0"
+
+# ValueChecker is a sub-anti-cheat module that can check whether the variable is changed by the game instead of cheating
+# !! Value Checker will not check variables starting with '_' !!
+# !! If you want to check a variable starting with '_', add it to the LogValueList !!
+ValueChecker:
+  # This variable is used to control whether to log value changes
+  EnableCheckingValueChanged: true
+
+  # You can add the important variables to LogValueList
+  # Or you can set it to empty list then it will log all variables in store namespace
+  LogValueList: []
+
+  # Set what variables you don't want to log (Useful when you set LogValueList to an empty list)
+  BlockList: []
+
+  # After how many conversations have passed, log the value (We don't recommend you to set it to 0, it may cause serious performance issues)
+  LogValuesAfterEveryConversations: 2
+
+
+# Logger is a submodule that can log anti-cheat module messages
+Logger:
+  # This variable is used to control whether to log AntiCheat module messages
+  EnableLogger: true
+
+  # This variable is used to control whether to use loguru module
+  EnableLoguru: true
+
+  # This variable is used to specify the directory to save the log
+  # Default Log Directory: config.basedir + 'logs/'
+  LogDir: "logs/"
+
+
+# IgnoreDeveloperKeys is a sub-anti-cheat module that can ignore developer tool key events
+IgnoreDeveloperKeys:
+  # This variable is used to control whether to ignore key events
+  EnableIgnoreDeveloperKeys: true
+
+  # This dict is used to record whether to mask the special key mapping
+  IgnoreKeyMaps:
+    choose_renderer: true
+    console: true
+    console_newer: true
+    console_older: true
+    developer: true
+    director: true
+    full_inspector: true
+    image_load_log: true
+    inspector: true
+    launch_editor: true
+    memory_profile: true
+    performance: true
+    profile_once: true
+    progress_screen: true
+    reload_game: true
+    rollback: true
+
