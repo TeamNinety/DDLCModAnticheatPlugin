@@ -75,7 +75,7 @@ init python in AntiCheat:
         unameObj = platform.uname()
 
         # Output initialization message
-        AntiCheatLogger.debug("\nAntiCheat Module Started. Runtime: " + t + " System: " + unameObj[0] + unameObj[3])
+        AntiCheatLogger.debug("\n" + "=" * 20 + "\nAntiCheat Module Started. Runtime: " + t + " System: " + unameObj[0] + unameObj[3] + "\n" + "=" * 20)
 
         # Delete useless variables
         del unameObj, t, logDir

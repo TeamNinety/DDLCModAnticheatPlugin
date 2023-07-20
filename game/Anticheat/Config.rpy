@@ -43,7 +43,7 @@ init python in AntiCheat:
     EnableLogger = _Settings_Dict["Logger"]['EnableLogger']
 
     # This variable is used to record the log location
-    logDir = config.basedir + _Settings_Dict["Logger"]['LogDir']
+    logDir = config.basedir + "/" + _Settings_Dict["Logger"]['LogDir']
 
     # This variable is used to control whether to use loguru module
     EnableLoguru = _Settings_Dict["Logger"]['EnableLoguru']
@@ -56,7 +56,7 @@ init python in AntiCheat:
     EnableIgnoreDeveloperKeys = _Settings_Dict['IgnoreDeveloperKeys']['EnableIgnoreDeveloperKeys']
 
     # This variable is used to record the key maps 
-    IgnoreKeyMaps = _Settings_Dict['IgnoreKeyMaps']['IgnoreKeyMaps']
+    IgnoreKeyMaps = _Settings_Dict['IgnoreDeveloperKeys']['IgnoreKeyMaps']
     ########################################################################
 
 

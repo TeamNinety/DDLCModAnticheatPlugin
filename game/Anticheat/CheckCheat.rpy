@@ -6,7 +6,7 @@ init python in AntiCheat:
 
     def isCheated():
         r = []
-        if EnableIgnoreDevelopeKeys:
+        if EnableIgnoreDeveloperKeys:
             r.append(IgnoreKeys.check())
         
         if EnableCheckingValueChanged:
