@@ -8,7 +8,8 @@ python early:
         return codes
 
     def execute_encrypted(parsed_object):
-        print(parsed_object)
+        # print(parsed_object)
+        pass
 
     renpy.register_statement(
         "encrypted",
