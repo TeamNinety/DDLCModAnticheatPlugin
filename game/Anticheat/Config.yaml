@@ -5,7 +5,7 @@ Version: "0.1.0"
 # !! If you want to check a variable starting with '_', add it to the LogValueList !!
 ValueChecker:
   # This variable is used to control whether to log value changes
-  EnableCheckingValueChanged: true
+  Enabled: true
 
   # You can add the important variables to LogValueList
   # Or you can set it to empty list then it will log all variables in store namespace
@@ -21,7 +21,7 @@ ValueChecker:
 # Logger is a submodule that can log anti-cheat module messages
 Logger:
   # This variable is used to control whether to log AntiCheat module messages
-  EnableLogger: true
+  Enabled: true
 
   # This variable is used to control whether to use loguru module
   EnableLoguru: true
@@ -31,13 +31,13 @@ Logger:
   LogDir: "logs/"
 
 
-# IgnoreDeveloperKeys is a sub-anti-cheat module that can ignore developer tool key events
-IgnoreDeveloperKeys:
-  # This variable is used to control whether to ignore key events
-  EnableIgnoreDeveloperKeys: true
+# MaskDeveloperKeys is a sub-anti-cheat module that can mask developer tool key events
+MaskDeveloperKeys:
+  # This variable is used to control whether to mask key events
+  Enabled: true
 
   # This dict is used to record whether to mask the special key mapping
-  IgnoreKeyMaps:
+  MaskKeyMaps:
     choose_renderer: true
     console: true
     console_newer: true
@@ -55,3 +55,22 @@ IgnoreDeveloperKeys:
     reload_game: true
     rollback: true
 
+# DetectUnofficialScripts is a sub-anti-cheat module that can detect scripts from non-developers
+# It will detect scripts ending with .rpy, .rpyc, .rpym and _ren.py files
+DetectUnofficialScripts:
+  # This variable is used to control whether to detect scripts from non-developers
+  Enabled: true
+
+  # This list is used to record scripts from developers
+  OfficialScriptsList:
+    # !! DO NOT EDIT THESE FILES BELOW
+    - BaseFunctions.rpy
+    - BaseModule.rpy
+    - CheckCheat.rpy
+    - CheckValue.rpy
+    - ConstNamespace.rpy
+    - DetectUnofficialScripts.rpy
+    - Exceptions.rpy
+    - Logger.rpy
+    - MaskDevToolsKeys.rpy
+    # Add your file below

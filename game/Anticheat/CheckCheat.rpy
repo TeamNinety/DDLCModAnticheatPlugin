@@ -6,10 +6,13 @@ init python in AntiCheat:
 
     def isCheated():
         r = []
-        if EnableIgnoreDeveloperKeys:
-            r.append(IgnoreKeys.check())
+        if EnableMaskinghDeveloperKeys:
+            r.append(MaskKeys.check())
         
         if EnableCheckingValueChanged:
             r.append(ValueChecker.check())
         
+        if EnableDetectingUnofficialScripts:
+            r.append(DetectUnofficialScripts.check())
+
         return not all(r)

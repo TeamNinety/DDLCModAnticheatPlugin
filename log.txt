@@ -1,0 +1,33 @@
+Tue Aug  1 17:13:45 2023
+Linux-6.4.6-zen1-1-zen-x86_64-with-glibc2.37
+Ren'Py 8.0.3.22090809
+ 
+
+Bootstrap to the start of init.init took 0.05s
+Early init took 0.00s
+Loader init took 0.00s
+Loading error handling took 0.02s
+
+Full traceback:
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/main.py", line 490, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/script.py", line 297, in load_script
+    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/script.py", line 809, in load_appropriate_file
+    self.finish_load(stmts, initcode, filename=lastfn) # type: ignore
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/script.py", line 499, in finish_load
+    node.early_execute()
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/ast.py", line 1188, in early_execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/usr/share/renpy/RenPy 8/renpy-8.0.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/Anticheat/CDS/01EncryptCode.rpy", line 9, in <module>
+    renpy.register_statement(
+TypeError: register() got an unexpected keyword argument 'execute_encrypted'
+
+While parsing /home/PartyParrot/Projects/DDLCModAnticheatPlugin/game/Anticheat/CDS/01EncryptCode.rpy.
+  File "game/Anticheat/CDS/01EncryptCode.rpy", line 9, in <module>
+    renpy.register_statement(
+TypeError: register() got an unexpected keyword argument 'execute_encrypted'
